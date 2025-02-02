@@ -33,13 +33,94 @@ main {
 form {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 h1 {
+    font-weight: var(--boldFont);
+    font-size: 2rem;
     margin: 0;
     margin-bottom: 1.5rem;
 }
 
 textarea {
     resize: none;
+    color: var(--darkGrey);
+    padding: .75rem 1.25rem;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--darkGrey);
+}
+
+input {
+    border-radius: .5rem;
+    padding: .75rem 1.25rem;
+    color: var(--darkGrey);
+    font-size: 1.1rem;
+    border: 1px solid var(--darkGrey);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.radioOptions {
+    display: flex;
+    gap: 1rem;
+}
+
+.radioOptions label {
+    font-size: 1.1rem;
+}
+
+.radioOptions div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .75rem 1rem;
+    border: 1px solid var(--darkGrey);
+    border-radius: .5rem;
+    gap: .5rem;
+}
+
+.radioOptions div:has(input[type="radio"]:checked) {
+    border: 1px solid var(--darkGreen);
+    background-color: var(--lightGreen);
+}
+
+.radioOptions input[type="radio"] {
+    transform: scale(1.5);
+}
+
+.radioOptions input[type="radio"]:checked {
+    accent-color: var(--darkGreen);
+}
+
+#consent {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#consent input {
+    transform: scale(1.5);
+}
+
+#consent input:checked {
+    accent-color: var(--darkGreen);
+}
+
+form button {
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+
+.attribution {
+    margin: 1rem;
 }
