@@ -1,0 +1,45 @@
+* {
+    font-family: "Karla", serif;
+}
+
+:root {
+    --lightGreen: hsl(148, 38%, 91%);
+    --darkGreen:  hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(186, 15%, 59%);
+    --darkGrey: hsl(187, 24%, 22%);
+    --fontSizeLabel: 1rem;
+    --thinFont: 400;
+    --boldFont: 700
+}
+
+body {
+    background-color: var(--lightGreen);
+    color: var(--darkGrey);
+}
+
+label {
+    font-size: var(--fontSizeLabel);
+}
+
+main {
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    margin: 1.5rem .5rem 0 .5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    resize: none;
+}
