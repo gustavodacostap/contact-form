@@ -18,63 +18,72 @@
   <main>
     <h1>Contact Us</h1>
 
-    <form>
+    <form novalidate>
       <div>
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName">
-        <!-- This field is required -->
+        <label for="firstName">First Name <span class="required">*</span></label>
+        <input type="text" name="firstName" id="firstName" required>
+        <span id="firstName-error" class="error-message none">This field is required</span>
       </div>
 
       <div>
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName"> <!-- This field is required -->
+        <label for="lastName">Last Name <span class="required">*</span></label>
+        <input type="text" name="lastName" id="lastName" required>
+        <span id="lastName-error" class="error-message none">This field is required</span>
       </div>
 
       <div>
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email">
-        <!-- Please enter a valid email address -->
-        <!-- This field is required -->
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" name="email" id="email" required>
+        <span id="email-error" class="error-message none">Please enter a valid email address</span>
       </div>
 
       <div id="queryTypeDiv">
-        <label for="queryType">Query Type</label>
+        <label for="queryType">Query Type <span class="required">*</span></label>
 
         <div class="radioOptions">
           <div>
-            <input type="radio" name="queryType" value="genralEnquiry">
+            <input type="radio" name="queryType" value="genralEnquiry" required>
             <label>General Enquiry</label>
           </div>
-          <div> 
+          <div>
             <input type="radio" name="queryType" value="supportRequest">
             <label>Support Request</label>
           </div>
-          <!-- Please select a query type -->
         </div>
+        <span id="queryType-error" class="error-message none">Please select a query type</span>
       </div>
 
       <div>
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="10"></textarea>
-        <!-- This field is required -->
+        <label for="message">Message <span>*</span></label>
+        <textarea name="message" id="message" rows="10" required></textarea>
+        <span id="message-error" class="error-message none">This field is required</span>
       </div>
 
-      <div id="consent">
-        <input type="checkbox" name="consent" id="consent">
-        <label for="consent">I consent to being contacted by the
-          team</label>
+      <div id="consentDiv">
+        <div>
+          <input type="checkbox" name="consent" id="consent" required>
+          <label for="consent">I consent to being contacted by the team <span class="required">*</span></label>
+        </div>
+        <span id="consent-error" class="error-message none">To submit this form, please consent to being
+          contacted</span>
       </div>
-      
-      <!-- To submit this form, please consent to being contacted -->
 
       <button type="submit">Submit</button>
     </form>
 
+    <div class="success-message">
+      <div>
+        <img src="./assets/images/icon-success-check.svg" id="icon">
+        <span>Message Sent!</span>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
   </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Gustavo da Costa</a>.
+    <br>
+    Coded by <a href="#https://github.com/gustavodacostap">Gustavo da Costa</a>.
   </div>
 </body>
 
