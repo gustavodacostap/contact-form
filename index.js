@@ -41,6 +41,7 @@ function validateForm(ev) {
             element.classList.remove('validated-border')
         })
         successMessage.classList.add('open-message')
+        successMessage.focus()
         setTimeout(() => {
             successMessage.classList.remove('open-message')
         }, 3000)
