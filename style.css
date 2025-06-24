@@ -241,6 +241,7 @@ form div {
     margin: 0 auto;
 }
 
+/* Attribuition */
 .attribution {
     margin: 1rem;
     text-align: center;
@@ -251,7 +252,9 @@ form div {
     text-decoration: none;
     color: var(--darkGreen);
 }
+  
 
+/* Media Queries */
 @media (max-width: 350px) {
     main {
         margin: auto 0;
